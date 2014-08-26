@@ -2,7 +2,7 @@ package com.easiio.shutup.provider;
 
 import java.util.HashMap;
 
-import com.easiio.shutup.provider.table.SettingTable;
+import com.easiio.shutup.provider.table.AlarmClockTable;
 
 import android.content.ContentProvider;
 import android.content.ContentUris;
@@ -32,7 +32,7 @@ public class DbProvider extends ContentProvider {
 
 	static {
 		sUriPathMap = new HashMap<Integer, String>();
-		sUriPathMap.put(10, SettingTable.TABLE_NAME);
+		sUriPathMap.put(10, AlarmClockTable.TABLE_NAME);
 
 		sUriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
 		for (Integer i : sUriPathMap.keySet()) {
